@@ -38,7 +38,7 @@
 /* temp */
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Vollkorn+SC&display=swap);
-
+h1 {font: normal 48px/1.4 sans-serif; letter-spacing: 1px;}
 .company {
 font: clamp(12px, calc(12px + 4*((100vw - 320px)/(1920 - 320))), 16px)/1.4 Noto Sans, sans-serif;
 color: #111; background: #fff;
@@ -60,13 +60,25 @@ a, label, button, input {cursor: pointer;}
 @media screen and (max-width: 680px){
   .feats {grid: 1fr/1fr;}
 }
-nav {z-index: 1;
+ul.bottoms {grid: 1fr/1fr 1fr 1fr 1fr; gap: 2em; display: grid; list-style: none;}
+@media screen and (max-width: 1080px){
+  ul.bottoms {grid: 1fr/1fr 1fr;}
+}
+@media screen and (max-width: 680px){
+  ul.bottoms {grid: 1fr/1fr;}
+}
+
+header {grid: 1fr/1fr; display: grid; background: #444;}
+
+
+nav {z-index: 1; box-shadow: 5px 0 12px #333;
+padding: .25em 0;
     /*height: 80px; */
-    position: fixed; 
-    top: 0;
+    position: sticky; 
+    top: 0; bottom: 0;
     left: 0;
     background: #337AB7;
-    width: 100%;
+    width: 100%; height: ;
     font-family: Verdana, sans-serif;    
 }
 nav ul {
@@ -80,7 +92,7 @@ nav ul {
     /*height: 80px; */
 }
 nav ul li {
-    margin: 0 10px;
+    margin: 5px;
 }
 nav ul li a {
     color: #BFE2FF;
@@ -91,15 +103,18 @@ nav ul li a {
     font-weight: bold;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
 }
 nav ul li a:hover {
     color: #FFF;
 }
 nav ul li a.active {
-    border-bottom: 2px solid #FFF;
-    padding-bottom: 6px;
+    border-color: #FFF;
+    
     color: #FFF;
 }
+section {min-height: 100vh;}
+
 section,
 header,
 footer {
@@ -110,7 +125,7 @@ footer {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    /*font-size: 40px;*/
     text-transform: uppercase;
     color: #337AB7;
     font-weight: bold;
@@ -128,9 +143,10 @@ section.active {
 header,
 footer {
     /*height: 400px;*/
-    background: #337AB7;
+    background: #333;
     color: #FFF;
 }
+footer {background: #333;}
   </style>
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css" />
@@ -175,9 +191,9 @@ footer {
 <body>
 
   <header>
-    <h1>Поддержка и продвижение сайтов на satu.kz</h1>
+<h1>Поддержка и продвижение сайтов на satu.kz</h1>
   </header>
-  <nav>
+ <nav>
     <ul>
       <li><a href="#section-1">Наше предложение</a></li>
       <li><a href="#section-2">Наши работы</a></li>
@@ -255,7 +271,7 @@ footer {
       <p>92,6% пользователей считают, что визуальный контент играет решающую роль при онлайн-покупке.Поэтому визуализация контента на сайте — это путь к росту продаж.</p>
     </section>
   </main>
-  <footer>Footer</footer>
+  <footer><p>Footer</p><ul class="bottoms"><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li></ul></footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
   </script>
   <script>
