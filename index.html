@@ -3,19 +3,134 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello!</title>
+  <title>Дратути</title>
   <meta name="description" content="description" />
   <meta name="author" content="author" />
   <meta name="keywords" content="keywords" />
   <link rel="stylesheet" href="./stylesheet.css" type="text/css" />
-  <style type="text/css">
+  <style>
     .body {
       width: auto;
     }
-    *, *:after,*:before {box-sizing: border-box!important;}
-body {background: #eee;}
-img {border: green 2px solid; display: block; margin: auto;}
-main p {color: red; font: bold 20px/1.4  sans-serif; text-align: center;}
+
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box !important;
+    }
+
+    body {
+      margin: 0;
+      background: #eee;
+    }
+
+    img {
+      border: green 2px solid;
+      display: block;
+      margin: auto;
+    }
+
+    main p {
+      color: red;
+      font: bold 20px/1.4 sans-serif;
+      text-align: center;
+    }
+/* temp */
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Vollkorn+SC&display=swap);
+
+.company {
+font: clamp(12px, calc(12px + 4*((100vw - 320px)/(1920 - 320))), 16px)/1.4 Noto Sans, sans-serif;
+color: #111; background: #fff;
+--light-main-c: #05ffa3; --main-c: #00b874; --dark-main-c: #006c44; 
+--light-contr-c: ; --contr-c: #00a0b8; --dark-contr-c: #00b818;
+--main-grad: linear-gradient(120deg, var(--main-c) 0%, rgba(255,255,255,0.7) 80%); z-index: 0; position: relative;}
+.company,.company * {box-sizing: border-box!important; transition: .5s;}
+.company *:before,.company *:after {box-sizing: border-box!important; transition: .5s;}
+
+.company img {display: block; margin: auto;}
+a, label, button, input {cursor: pointer;}
+.company:not(a, label, button, input) {cursor: default;}
+
+.feats {grid: 1fr/1fr 1fr 1fr 1fr; gap: 1em; display: grid;}
+.feat {border: 4px solid #555;}
+@media screen and (max-width: 1080px){
+  .feats {grid: 1fr/1fr 1fr;}
+}
+@media screen and (max-width: 680px){
+  .feats {grid: 1fr/1fr;}
+}
+nav {z-index: 1;
+    /*height: 80px; */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background: #337AB7;
+    width: 100%;
+    font-family: Verdana, sans-serif;    
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*height: 80px; */
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #BFE2FF;
+    display: inline-flex;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+nav ul li a:hover {
+    color: #FFF;
+}
+nav ul li a.active {
+    border-bottom: 2px solid #FFF;
+    padding-bottom: 6px;
+    color: #FFF;
+}
+section,
+header,
+footer {
+    background: #fff;
+    border-bottom: 4px solid #337AB7;
+    /*height: 600px;*/
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #337AB7;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;       
+}
+section:nth-child(even) {
+    background: #BFE2FF;
+}
+section:first-child {
+    margin-top: 60px;
+}
+section.active {
+    /* Стиль для активной секции */
+}
+header,
+footer {
+    /*height: 400px;*/
+    background: #337AB7;
+    color: #FFF;
+}
   </style>
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css" />
@@ -54,20 +169,122 @@ main p {color: red; font: bold 20px/1.4  sans-serif; text-align: center;}
     })(window, document, 'script', 'dataLayer', 'GTM-XXXX');
   </script>
   <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
-  <header><h1>Company name</h1></header>
-  <nav>Main contacts call</nav>
+
+  <header>
+    <h1>Поддержка и продвижение сайтов на satu.kz</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#section-1">Наше предложение</a></li>
+      <li><a href="#section-2">Наши работы</a></li>
+      <li><a href="#section-3">Почему мы</a></li>
+      <li><a href="#section-4">Контакты</a></li>
+      <li><a href="#section-5">Связаться с нами</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section class="company" id="main">
+    <section class="company" id="section-1">
+      <h2>Здесь надо будет подготовить компании</h2>
       <p>Sample</p>
       <img src="//unsplash.it/300?random=1" alt="" title="" loading="lazy" width="" height="">
       <p>Sample</p>
+      <p>Представляем комплексный продукт для продвижения вашего сайта от экспертов портала Satu.kz.</p>
+
+      <p>Основные факторы влияющие на подбор стратегии развития:</p>
+
+      <p>Анализ текущего состояния сайта и его характеристик.</p>
+
+      <p>Анализ прямых конкурентов и рыночной конъюктуры.</p>
+
+      <p>Выбор наиболее перспективных и эффективных решений.</p>
+
+      <p>Долгосрочная стратегия развития.</p>
+
       <a class="button" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a>
+    </section>
+
+    <section class="company" id="section-2">
+      <h2>Здесь надо будет подготовить компании</h2>
+      <p>Приоритетность целей</p>
+      <p>Увеличение рейтинга товаров и услуг внутри каталога Satu.kz</p>
+
+      <p>На Satu.kz требуется оптимальная настройка всех разделов личного кабинета, продвижение по теговой и поисковой выдаче портала, правильный подбор ключевых фраз и категорий товаров. Для получения большего результата необходимо периодически пополнять бюджет на ProSale.</p>
+    </section>
+    <section class="company" id="section-3">
+      <h2>Тест адаптива</h2>
+      <section class="feats">
+        <figure class="feat">
+          <figcaption>
+            <p>Улучшение визуального оформления сайта и его выдачи в поисковых системах</p>
+          </figcaption>
+        </figure>
+        <figure class="feat">
+          <figcaption>
+            <p>Улучшение визуального оформления сайта и его выдачи в поисковых системах</p>
+          </figcaption>
+        </figure>
+        <figure class="feat">
+          <figcaption>
+            <p>Улучшение визуального оформления сайта и его выдачи в поисковых системах</p>
+          </figcaption>
+        </figure>
+        <figure class="feat">
+          <figcaption>
+            <p>Улучшение визуального оформления сайта и его выдачи в поисковых системах</p>
+          </figcaption>
+        </figure>
+      </section>
+      <p>Улучшение визуального оформления сайта и его выдачи в поисковых системах</p>
+
+      <p>Постоянное наполнение сайта уникальным контентом обеспечат постепенный рост трафика изпоисковых систем. Профессионально и красочно оформленные страницы завладеют вниманием покупателя и увеличат количество его целевых действий на сайте.</p>
+    </section>
+    <section class="company" id="section-4">
+      <h2>Здесь надо будет подготовить компании</h2>
+      <p>Повышение узнаваемости компании и клиентской лояльности</p>
+
+      <p>Качественное визуальное оформление сайта и публикация материалов предоставленных компанией (портфолио, фото, сертификатов качества, лицензий, письменных отзывов и т.д.) повысят узнаваемость бренда, доверие покупателей и выделят компанию на фоне конкурентов.</p>
+    </section>
+    <section class="company" id="section-5">
+      <h2>Здесь надо будет подготовить компании</h2>
+      <p>80% эффекта продвижения происходит за счет внутренних работ над сайтом и наполнения качественным контентом.Поэтому оптимизация настроек и контента на сайте — это путь к росту посещений.</p>
+      <p>92,6% пользователей считают, что визуальный контент играет решающую роль при онлайн-покупке.Поэтому визуализация контента на сайте — это путь к росту продаж.</p>
     </section>
   </main>
   <footer>Footer</footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+  </script>
+  <script>
+    let sections = $('section'),
+      nav = $('nav'),
+      nav_height = nav.outerHeight();
+    $(window).on('scroll', function() {
+      $('nav a').removeClass('active');
+      let cur_pos = $(this).scrollTop();
+      sections.each(function() {
+        let top = $(this).offset().top - nav_height - 180,
+          bottom = top + $(this).outerHeight();
+        if (cur_pos >= top && cur_pos <= bottom) {
+          nav.find('a').removeClass('active');
+          sections.removeClass('active');
+          $(this).addClass('active');
+          nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+        }
+      });
+    });
+    nav.find('a').on('click', function() {
+      let $el = $(this),
+        id = $el.attr('href');
+      $('html, body').animate({
+        scrollTop: $(id).offset().top - nav_height
+      }, 600);
+      return false;
+    });
+  </script>
 </body>
 
 </html>
