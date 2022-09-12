@@ -8,6 +8,7 @@
   <meta name="author" content="author" />
   <meta name="keywords" content="keywords" />
   <link rel="stylesheet" href="./stylesheet.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
     .body {
       width: auto;
@@ -37,8 +38,10 @@
     }
 /* temp */
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Vollkorn+SC&display=swap);
-h1 {font: normal 48px/1.4 sans-serif; letter-spacing: 1px;}
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans&family=Vollkorn+SC&family=Philosopher&display=swap);
+
+h1 {font: normal 6vw/1.4 Philosopher,sans-serif; letter-spacing: 2px;}
+
 .company {
 font: clamp(12px, calc(12px + 4*((100vw - 320px)/(1920 - 320))), 16px)/1.4 Noto Sans, sans-serif;
 color: #111; background: #fff;
@@ -147,6 +150,43 @@ footer {
     color: #FFF;
 }
 footer {background: #333;}
+
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
   </style>
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css" />
@@ -272,6 +312,8 @@ footer {background: #333;}
     </section>
   </main>
   <footer><p>Footer</p><ul class="bottoms"><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li></ul></footer>
+<!-- Back to top button -->
+<a id="button"></a>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
   </script>
   <script>
@@ -301,6 +343,18 @@ footer {background: #333;}
       return false;
     });
   </script>
+  <script>var btn = $('#button');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});</script>
 </body>
 
 </html>
