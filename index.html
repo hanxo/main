@@ -156,29 +156,23 @@ footer {
 footer {background: #333;}
 
 #button {
-  display: inline-block;
+  display: grid;
+  place-items: center;
   background-color: #FF9800;
-  width: 50px;
-  height: 50px;
   text-align: center;
   border-radius: 4px;
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  transition: .5s;
   opacity: 0;
-  visibility: hidden;
   z-index: 1000;
 }
 #button::after {
   content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
+  font: 2em/1 FontAwesome;
   color: #fff;
+  padding: 8px;
 }
 #button:hover {
   cursor: pointer;
@@ -189,7 +183,6 @@ footer {background: #333;}
 }
 #button.show {
   opacity: 1;
-  visibility: visible;
 }
   </style>
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
