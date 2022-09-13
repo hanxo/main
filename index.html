@@ -158,10 +158,11 @@ footer {background: #333;}
 #button {
   display: grid;
   place-items: center;
-  background-color: #FF9800;
+  background: #FF9800;
+  border-radius: 50%;
   text-align: center;
-  border-radius: 4px;
   position: fixed;
+  z-index: 1;
   bottom: 30px;
   right: 30px;
   transition: .5s;
@@ -169,8 +170,8 @@ footer {background: #333;}
   z-index: 1000;
 }
 #button::after {
-  content: "\f077";
-  font: 2em/1 FontAwesome;
+  content: "\f182";
+  font: 2em/1 Material Icons;
   color: #fff;
   padding: 8px;
 }
