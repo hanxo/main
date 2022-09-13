@@ -155,8 +155,8 @@ footer {
 }
 footer {background: #333;}
 
-#button {
-  display: grid;
+#button {fill: #fff;
+ display: grid;
   place-items: center;
   position: fixed;
   z-index: 1;
@@ -165,18 +165,14 @@ footer {background: #333;}
   transition: .5s;
   opacity: 0;
   z-index: 1000;
-}
-#button::after {display: grid;
-  place-items: center;
-  content: "\f077";
-  font: 2em/1 FontAwesome;
-  color: #fff;
-  background: #FF9800;
+   background: #FF9800;
   border-radius: 50%;
   padding: 8px;
-}
-#button:hover#button:after {
   cursor: pointer;
+}
+
+#button:hover {
+  
   background-color: #333;
 }
 #button:active {
@@ -311,7 +307,8 @@ footer {background: #333;}
   </main>
   <footer><p>Footer</p><ul class="bottoms"><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li></ul></footer>
 <!-- Back to top button -->
-<a id="button"></a>
+ <a id="button"><svg width="48" height="48" viewBox="0 0 48 48"><path d="M8 24l2.83 2.83L22 15.66V40h4V15.66l11.17 11.17L40 24 24 8 8 24z"/></svg>
+</a>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
   </script>
   <script>
