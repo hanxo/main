@@ -7,12 +7,8 @@
   <meta name="description" content="description" />
   <meta name="author" content="author" />
   <meta name="keywords" content="keywords" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Overpass:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Philosopher|font2|etc" type="text/css" />
   <link rel="stylesheet" href="./stylesheet.css" type="text/css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
     .body {
       width: auto;
@@ -68,6 +64,7 @@ a, label, button, input {cursor: pointer;}
   .feats {grid: 1fr/1fr;}
 }
 ul.bottoms {grid: 1fr/1fr 1fr 1fr 1fr; gap: 2em; display: grid; list-style: none;}
+.bottoms a:any-link {color: #fff; text-decoration: none;}
 @media screen and (max-width: 1080px){
   ul.bottoms {grid: 1fr/1fr 1fr;}
 }
@@ -75,7 +72,7 @@ ul.bottoms {grid: 1fr/1fr 1fr 1fr 1fr; gap: 2em; display: grid; list-style: none
   ul.bottoms {grid: 1fr/1fr;}
 }
 
-header {grid: 1fr/1fr; display: grid; background: #444;}
+header {padding: 1em; background: #444;}
 
 
 nav {z-index: 1; box-shadow: 5px 0 12px #333;
@@ -126,7 +123,7 @@ section,
 header,
 footer {
     background: #fff;
-    border-bottom: 4px solid #337AB7;
+    /*border-bottom: 4px solid #337AB7;*/
     /*height: 600px;*/
     display: flex;
     flex-flow: column;
@@ -142,7 +139,7 @@ section:nth-child(even) {
     background: #BFE2FF;
 }
 section:first-child {
-    margin-top: 60px;
+   /* margin-top: 60px;*/
 }
 section.active {
     /* Стиль для активной секции */
@@ -165,24 +162,28 @@ footer {background: #333;}
   transition: .5s;
   opacity: 0;
   z-index: 1000;
-   background: #FF9800;
-  border-radius: 50%;
-  padding: 8px;
-  cursor: pointer;
-}
-
-#button:hover {
+   
   
-  background-color: #333;
+  cursor: pointer;
+  
+}
+#button svg {background: #FF9800;
+  border-radius: 50%; padding: 8px;}
+#button:hover#button svg {
+  
+  background-color: #555;
 }
 #button:active {
-  background-color: #555;
+  background-color: #777;
 }
 #button.show {
   opacity: 1;
 }
   </style>
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Overpass:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-Y"></script>
@@ -225,9 +226,9 @@ footer {background: #333;}
 <body>
 
   <header>
-<h1>Поддержка и продвижение сайтов на satu.kz</h1>
+    <h1>Поддержка и продвижение сайтов на satu.kz</h1>
   </header>
- <nav>
+  <nav>
     <ul>
       <li><a href="#section-1">Наше предложение</a></li>
       <li><a href="#section-2">Наши работы</a></li>
@@ -294,6 +295,11 @@ footer {background: #333;}
       <p>Постоянное наполнение сайта уникальным контентом обеспечат постепенный рост трафика изпоисковых систем. Профессионально и красочно оформленные страницы завладеют вниманием покупателя и увеличат количество его целевых действий на сайте.</p>
     </section>
     <section class="company" id="section-4">
+      <section class="call-with">
+<!---<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc47dNhKR7RTGuKqB0GOK1DShNOli5us6glATIAkrUIydKp9w/viewform?embedded=true" style="display: block;" width="1000" height="947" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>--->
+<script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+<iframe src="https://forms.yandex.ru/u/631f0d9ab1c5bfe722aa1501/?iframe=1" style="display: block; padding: 24px 36px;" frameborder="0" name="ya-form-631f0d9ab1c5bfe722aa1501" width="650"></iframe>
+</section>
       <h2>Здесь надо будет подготовить компании</h2>
       <p>Повышение узнаваемости компании и клиентской лояльности</p>
 
@@ -305,9 +311,23 @@ footer {background: #333;}
       <p>92,6% пользователей считают, что визуальный контент играет решающую роль при онлайн-покупке.Поэтому визуализация контента на сайте — это путь к росту продаж.</p>
     </section>
   </main>
-  <footer><p>Footer</p><ul class="bottoms"><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li><li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li></ul></footer>
-<!-- Back to top button -->
- <a id="button"><svg width="48" height="48" viewBox="0 0 48 48"><path d="M8 24l2.83 2.83L22 15.66V40h4V15.66l11.17 11.17L40 24 24 8 8 24z"/></svg>
+  <footer>
+    <p>Footer</p>
+    <ul class="bottoms">
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+      <li><a class="" href="/delivery_info" rel="noopener noreferrer nofollow" target="_blank">Доставка и оплата</a></li>
+    </ul>
+  </footer>
+  <!-- Back to top button -->
+  <a id="button"><svg width="48" height="48" viewBox="0 0 48 48">
+<!--<path fill="#FF9800" d="M0 0h48v48H0V0z"/>-->
+<path d="M8 24l2.83 2.83L22 15.66V40h4V15.66l11.17 11.17L40 24 24 8 8 24z"/></svg>
 </a>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
   </script>
@@ -338,18 +358,22 @@ footer {background: #333;}
       return false;
     });
   </script>
-  <script>var btn = $('#button');
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});</script>
+  <script>
+    var btn = $('#button');
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: 0
+      }, '300');
+    });
+  </script>
 </body>
 
 </html>
